@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Be My Valentine ❤️</title>
+
+<style>
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, pink, hotpink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial;
+  overflow: hidden;
+}
+
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+#yes {
+  background: #ff3366;
+  color: white;
+}
+
+#no {
+  background: gray;
+  position: absolute;
+}
+</style>
+</head>
+
+<body>
+<h1 style="color:red;">TEST PAGE LOADED</h1>
+<div class="card">
+  <h1>Will you be my Valentine? ❤️</h1>
+  <button id="yes" onclick="yesClick()">YES 😘</button>
+  <button id="no" onmouseover="moveNo()">NO 😜</button>
+</div>
+
+<script>
+function moveNo() {
+  let no = document.getElementById("no");
+  no.style.left = Math.random() * (window.innerWidth - 100) + "px";
+  no.style.top = Math.random() * (window.innerHeight - 50) + "px";
+}
+
+function yesClick() {
+  window.location.href = "yes.html";
+}
+</script>
+
+</body>
+</html>
